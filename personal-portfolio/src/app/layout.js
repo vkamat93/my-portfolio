@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "../../components/main/StarBackground";
-import Navbar from "../../components/main/Navbar";
+import StarsCanvas from "../components/main/StarBackground";
+import Navbar from "../components/main/Navbar";
+import Footer from "@/components/main/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 const inter = Inter({subsets: ['latin']})
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "This is my personal portfolio",
+  title: "Space Portfolio",
+  description: "This is a space portfolio",
 };
 
 export default function RootLayout({ children }) {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <StarsCanvas/>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
